@@ -1,4 +1,4 @@
-package org.bonn.se.ws17.uebung03_01.uebung02_03;
+package org.bonn.se.ws17.uebung03_02;
 
 public class Main {
     public static void main(String[] args) {
