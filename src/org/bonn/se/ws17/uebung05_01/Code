@@ -1,0 +1,13 @@
+Code:
+    Typ Bezeichner [ = AddAusdruck] ;
+AddAusdruck:
+    Atom { + Atom}
+Atom:
+    Bezeichner
+    Literal
+
+Beispiel:
+
+String xml;         //Type Bezeichner;
+String s1 = xml;    //Type Bezeichner = Addausdruck(Bezeichner);
+String s2 = "Text"  //Type Bezeichner = Addausdruck(Literal);
