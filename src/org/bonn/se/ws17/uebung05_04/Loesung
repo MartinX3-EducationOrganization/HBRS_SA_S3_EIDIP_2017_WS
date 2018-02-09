@@ -1,0 +1,6 @@
+Packete werden mit "package" gekennzeichnet.
+Packetebezeichner werden kleingeschrieben.
+Verschachtelte Packete werden mit "." getrennt. Bsp.: paackage biologie.voegel.greifvoegel;
+Pakete werden mit einem Semikolon beendet.
+
+Die Semantik und Syntax ähnelt dem Import von Klassen.
