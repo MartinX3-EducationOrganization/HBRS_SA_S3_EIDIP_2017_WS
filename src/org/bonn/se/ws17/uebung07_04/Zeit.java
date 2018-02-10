@@ -41,7 +41,7 @@ public class Zeit {
         return 31;
     }
 
-    public String nameVonMonat(int monat) throws Exception {
+    public static String nameVonMonat(int monat) throws Exception {
         if (monat < 1 || monat > 12) {
             throw new Exception("ungueltiger Wert fuer Monat " + monat);
         } else {
@@ -49,7 +49,7 @@ public class Zeit {
         }
     }
 
-    public int tageVonMonat(String monat) throws Exception {
+    public static int tageVonMonat(String monat) throws Exception {
         List<String> monatList = Arrays.asList(Zeit.monate);
         if (!monatList.contains(monat)) {
             throw new Exception("ungueltiger Wert fuer Monat: " + '\"' + monat + '\"');

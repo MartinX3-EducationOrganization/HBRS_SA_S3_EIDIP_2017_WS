@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>60</y>
+      <w>300</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Zeit
+--
+_- monate : String[]_
+--
+_+ istSchaltjahr(int jahr) : boolean_
+_+ tageInMonat(int monat,int jahr) : int_
+_+ nameVonMonat(int monat) : String_
+_+ tageVonMonat(String monat) : int_</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
