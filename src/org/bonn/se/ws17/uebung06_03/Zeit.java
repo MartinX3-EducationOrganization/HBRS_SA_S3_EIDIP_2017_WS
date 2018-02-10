@@ -3,7 +3,7 @@ package org.bonn.se.ws17.uebung06_03;
 public class Zeit {
 
     public static boolean istSchaltjahr(int jahr) {
-        if (jahr < 1583) {  //Julianischer Kalender
+        if (jahr < 1583) {
             return (jahr % 4 == 0);
         } else {
             return (((jahr % 4 == 0) && (jahr % 100 != 0)) || (jahr % 400 == 0));
