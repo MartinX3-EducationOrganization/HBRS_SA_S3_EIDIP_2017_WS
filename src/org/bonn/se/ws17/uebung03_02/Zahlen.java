@@ -13,10 +13,14 @@ public class Zahlen {
     }
 
     public static void einmaleins(int n) {
-        int w = 1;
+        int w = 0;
         while (n != w) {
-            Zahlen.vielfache(w, n);
             w++;
+            Zahlen.vielfache(w, n);
         }
+    }
+
+    public static void main(String[] args) {
+        Zahlen.einmaleins(5);
     }
 }
