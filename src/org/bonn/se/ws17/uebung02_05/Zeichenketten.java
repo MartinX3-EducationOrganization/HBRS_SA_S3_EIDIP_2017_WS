@@ -2,7 +2,7 @@ package org.bonn.se.ws17.uebung02_05;
 
 
 public class Zeichenketten {
-    public static String halloMitZahl(int stunde, String name) {
+    public static String halloMitZeit(int stunde, String name) {
 
         if (stunde < 12) {
             return String.format("Guten Morgen, %s !", name);
