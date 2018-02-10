@@ -1,3 +1,4 @@
+/*
 package org.bonn.se.ws17.uebung11_03;
 
 public class Job {
@@ -42,3 +43,4 @@ public class Arbeiten {
         job.zweck();
     }
 }
+*/
