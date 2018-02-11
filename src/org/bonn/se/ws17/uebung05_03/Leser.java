@@ -1,4 +1,4 @@
-package org.bonn.se.ws17.uebung05_02;
+package org.bonn.se.ws17.uebung05_03;
 
 import java.util.Scanner;
 
