@@ -16,10 +16,9 @@ public class Mensch {
         } else if (!Zeichenketten.istName(nachname)) {
             throw new Exception("ungueltiger Wert fuer Nachname: " + '\"' + nachname + '\"');
         } else {
-            Datum geb = new Datum(geburtsdatum.jahr(), geburtsdatum.monat(), geburtsdatum.tag());
             this.vorname = vorname;
             this.nachname = nachname;
-            this.geburtsdatum = geb;
+            this.geburtsdatum = new Datum(geburtsdatum.jahr(), geburtsdatum.monat(), geburtsdatum.tag());
             Mensch.anzahl++;
         }
     }
@@ -37,8 +36,7 @@ public class Mensch {
     }
 
     public Datum geburtsdatum() {
-        Datum o = new Datum(geburtsdatum.jahr(), geburtsdatum.monat(), geburtsdatum.tag());
-        return o;
+        return new Datum(geburtsdatum.jahr(), geburtsdatum.monat(), geburtsdatum.tag());
     }
 
     public int alter(Datum o) {
