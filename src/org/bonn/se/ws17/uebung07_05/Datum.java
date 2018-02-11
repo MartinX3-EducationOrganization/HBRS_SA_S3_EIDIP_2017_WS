@@ -42,7 +42,7 @@ public class Datum {
         return Datum.anzahl;
     }
 
-    public static void setzteFormatRF(String s) throws Exception {
+    public static void setzeFormatRF(String s) throws Exception {
         switch (s) {
             case "jmt":
                 Datum.reihenfolge = s;
@@ -126,5 +126,4 @@ public class Datum {
         }
         return s;
     }
-
 }
