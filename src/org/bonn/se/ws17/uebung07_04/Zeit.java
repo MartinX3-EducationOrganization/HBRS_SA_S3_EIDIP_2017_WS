@@ -9,8 +9,8 @@ public class Zeit {
     private static final String[] monate = {"Januar", "Februar", "Maerz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"};
 
     public static boolean istSchaltjahr(int jahr) throws Exception {
-        if (jahr < 0) {
-            throw new Exception("ungueltigeer Wert fuer Jahr: " + jahr);
+        if (jahr <= 0) {
+            throw new Exception("ungueltiger Wert fuer Jahr: " + jahr);
         }
         if (jahr < 1583) {
             return (jahr % 4 == 0);
@@ -29,7 +29,7 @@ public class Zeit {
 
         if (monat == 2 && Zeit.istSchaltjahr(jahr)) {
             return 29;
-        } else if (monat == 2 && Zeit.istSchaltjahr(jahr)) {
+        } else if (monat == 2 && !Zeit.istSchaltjahr(jahr)) {
             return 28;
         } else {
             for (int i = 0; i < tagemit30.length; i++) {
@@ -43,17 +43,17 @@ public class Zeit {
 
     public static String nameVonMonat(int monat) throws Exception {
         if (monat < 1 || monat > 12) {
-            throw new Exception("ungueltiger Wert fuer Monat " + monat);
+            throw new Exception("ungueltiger Wert fuer Monat: " + monat);
         } else {
             return Zeit.monate[monat - 1];
         }
     }
 
-    public static int tageVonMonat(String monat) throws Exception {
+    public static int monatVonName(String a) throws Exception {
         List<String> monatList = Arrays.asList(Zeit.monate);
-        if (!monatList.contains(monat)) {
-            throw new Exception("ungueltiger Wert fuer Monat: " + '\"' + monat + '\"');
+        if (!monatList.contains(a)) {
+            throw new Exception("ungueltiger Wert fuer Monat: " + '\"' + a + '\"');
         }
-        return monatList.indexOf(monat) + 1; // +1 Da index bei 0 beginnt.
+        return monatList.indexOf(a) + 1; // +1 Da index bei 0 beginnt.
     }
 }
