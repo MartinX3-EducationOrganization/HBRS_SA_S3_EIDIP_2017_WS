@@ -29,7 +29,6 @@ public class Zahlen {
         }
         return c;
     }
-
     // a - b = ?
     public static int differenzRek(int a, int b) {
         return Zahlen.differenzRek(a, b, 0);
