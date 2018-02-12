@@ -38,8 +38,4 @@ public class Zahlen {
             return Zahlen.potenzR(a * a, b / 2) * a;
         }
     }
-
-    public static void main(String[] args) {
-        System.out.println(Zahlen.potenzLoop(4, 2));
-    }
 }
