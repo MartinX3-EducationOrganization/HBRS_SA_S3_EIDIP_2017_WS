@@ -3,6 +3,7 @@ package org.bonn.se.ws17.uebung08_05;
 public class Zahlen {
     // b = potenz (a^b)
     public static int potenzLoop(int a, int b) {
+        int c = a;
         if (b == 0) {
             return 1;
         }
@@ -13,10 +14,8 @@ public class Zahlen {
                 b /= 2;
 
             } else if (b % 2 != 0) {
-                int c = a;
-                a *= a;
+                a *= a * c;
                 b /= 2;
-                a = (a * b) * c;
             }
         }
         return a;
@@ -38,5 +37,9 @@ public class Zahlen {
         } else {
             return Zahlen.potenzR(a * a, b / 2) * a;
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Zahlen.potenzLoop(4, 2));
     }
 }
