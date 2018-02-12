@@ -49,6 +49,10 @@ public class Zahlen {
         return (rechenmaschine * 4.0);  //
     }
 
+    public static double pi3() {
+        return Zahlen.pi3(Zahlen.eps);
+    }
+
     public static double pi3(double eps) {
         double differenzuPi;
         boolean vorzeichen = true;
