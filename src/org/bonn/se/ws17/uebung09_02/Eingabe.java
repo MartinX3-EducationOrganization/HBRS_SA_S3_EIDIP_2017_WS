@@ -6,18 +6,22 @@ import java.util.Scanner;
 public class Eingabe {
     public static boolean pruefeKlammern() {
         Scanner sc = new Scanner(System.in);
+        boolean bl = true;
         while (sc.hasNext()) {
             String input = sc.next();
             if (input.equals("[") || input.equals("{") || input.equals("(")) {
-                return Eingabe.pruefeRek(sc, Eingabe.setBracket(input));
+                boolean br = Eingabe.pruefeRek(sc, Eingabe.setBracket(input));
+                if (!br) {
+                    bl = false;
+                }
             }
         }
-        return false;
+        return bl;
     }
 
     public static boolean pruefeRek(Scanner sc, String bracket) {
         String endbracket;
-        boolean bl = true;
+
         if (bracket.equals("[")) {
             endbracket = "]";
         } else if (bracket.equals("{")) {
@@ -30,13 +34,10 @@ public class Eingabe {
             if (input.equals("[") || input.equals("{") || input.equals("(")) {
                 return Eingabe.pruefeRek(sc, Eingabe.setBracket(input));
             } else if (input.equals("]") || input.equals("}") || input.equals(")")) {
-                boolean br = (input.equals(endbracket));
-                if (!br) {
-                    bl = false;
-                }
+                return (input.equals(endbracket));
             }
         }
-        return bl;
+        return false;
     }
 
     public static String setBracket(String input) {
