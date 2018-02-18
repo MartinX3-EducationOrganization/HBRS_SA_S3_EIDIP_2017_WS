@@ -20,63 +20,6 @@ public class Gomoku {
         spielfeld = new int[z][s];
     }
 
-    public static void main(String[] args) throws Exception {
-        Gomoku g = new Gomoku(6, 5, 4, 3);
-        g.naechster();
-        g.setze(0, 0);
-        g.naechster();
-        g.setze(0, 1);
-        g.naechster();
-        g.setze(0, 3);
-        g.naechster();
-        g.setze(0, 4);
-        g.naechster();
-        g.setze(1, 1);
-        g.naechster();
-        g.setze(1, 2);
-        g.naechster();
-        g.setze(1, 3);
-        g.naechster();
-        g.setze(2, 0);
-        g.naechster();
-        g.setze(2, 1);
-        g.naechster();
-        g.setze(2, 3);
-        g.naechster();
-        g.setze(2, 4);
-        g.naechster();
-        g.setze(3, 1);
-        g.naechster();
-        g.setze(3, 2);
-        g.naechster();
-        g.setze(3, 3);
-        g.naechster();
-        g.setze(4, 0);
-        g.naechster();
-        g.setze(4, 1);
-        g.naechster();
-        g.setze(4, 3);
-        g.naechster();
-        g.setze(4, 4);
-        g.naechster();
-        g.setze(5, 1);
-        g.naechster();
-        g.setze(5, 2);
-        g.naechster();
-        g.setze(5, 3);
-        g.istReihe(0, 0);
-        g.istReihe(0, 1);
-        g.istReihe(0, 2);
-        g.istReihe(0, 3);
-        g.istReihe(0, 4);
-        g.istReihe(1, 0);
-        g.istReihe(1, 1);
-        g.istReihe(1, 2);
-        // Laut Praktomat soll das false sein. -.-
-        System.out.println(g.istReihe(1, 4));
-        System.out.println(g.toString());
-    }
-
     public int naechster() {
         if (naechster + 1 > p) {
             naechster = 0;
@@ -90,15 +33,21 @@ public class Gomoku {
         } else {
             spielfeld[i][j] = naechster();
             if (istReihe(i, j)) {
+                naechster++;
                 return true;
-
+            } else {
+                naechster++;
+                return false;
             }
-            naechster++;
-            return false;
         }
     }
 
+
     public boolean istReihe(int i, int j) {
+        // Fall der Punkt(i,j) ungleich dem SpielerStein ist.
+        if (spielfeld[i][j] == 0) {
+            return false;
+        }
         // Horizontal
         if (((zaehle(i, j, 0, 1, 0) + (zaehle(i, j, 0, -1, 0)) == n - 1))) {
             return true;
@@ -119,7 +68,7 @@ public class Gomoku {
         int a = i + incI;
         int b = j + incJ;
         if (a >= 0 && a < z && b >= 0 && b < s) {
-            if (spielfeld[i + incI][j + incJ] == naechster()) {
+            if (spielfeld[a][b] == spielfeld[i][j]) {
                 return zaehle(i + incI, j + incJ, incI, incJ, count + 1);
             }
             return count;
