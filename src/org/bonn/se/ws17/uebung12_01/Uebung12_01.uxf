@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>60</y>
+      <w>210</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Mensch/
+--
+_-anzahl: int_
+-final name: String
+-chromosomen: String
+-alter: int
+-koerpergroesse: int
+-koerpergewicht: int
+--
++ Mensch(name: String,alter: int,koepergroesse: int,koerpergewicht: int)
+_+anzahl(): int_
+_volljaehrigkeitsAlter(): int_
+/+chromosomen(): String/
+/+preisHaarschnitt(): int/
++name: String
++alter: int
++groesse: int
++gewicht: int
+setAlter(alter: int)
+setGroesse(koerpergroesse: int)
+setGewicht(koerpergewicht: int)
++istVolljaehrig(): boolean
++toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>520</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Frau
+--
+_-anzahl int_
+-final chromosomen: String
+--
++Frau(name: String, alter: int, koerpergroesse: int, koerpergewicht: int)
+_+anzahl(): int_
++chromosomen(): String
++groesse(): int
++preisHaarschnitt(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>250</x>
+      <y>520</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Mann
+--
+_-anzahl: int_
+-final chromosomen: String
+--
++Mann(name: String, alter: int, koerpergroesse: int, koerpergewicht: int)
+_-anzahl(): int_
++chromosomen(): String
++groesse(): int
++preisHaarschnitt(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>420</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;140.0;40.0;140.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>420</y>
+      <w>200</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;180.0;40.0;10.0;40.0;10.0;100.0</additional_attributes>
+  </element>
+</diagram>

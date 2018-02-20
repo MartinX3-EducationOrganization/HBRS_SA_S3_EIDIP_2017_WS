@@ -1,4 +1,4 @@
-package org.bonn.se.ws17.uebung12_01;
+package org.bonn.se.ws17.uebung12_02;
 
 
 public class Frau extends Mensch {

@@ -1,4 +1,4 @@
-package org.bonn.se.ws17.uebung12_01;
+package org.bonn.se.ws17.uebung12_02;
 
 public abstract class Mensch {
     private static int anzahl; //Anzahlen der Instanzen vom Typ Mensch
