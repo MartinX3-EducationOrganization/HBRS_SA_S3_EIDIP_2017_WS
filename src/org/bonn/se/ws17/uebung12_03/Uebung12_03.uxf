@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>500</x>
+      <y>80</y>
+      <w>280</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>/Figur/
+--
+
+--
+/+equals(o: Object): boolean/
+/+mitte(): Punkt/
+/+durchmesser(): double/
+/+flaeche(): double/
+/+umfang(): double/
+/+istEnthalten(p: Punkt): boolean/
+/+verschiebe(dx: double, dy: double): Figur/
+/+toString(): String/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>350</y>
+      <w>330</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>/FigurPerMitte/
+--
+-mittelpunkt: Punkt
+--
++FigurPerMitte(mitte: Punkt)
++FigutPerMitte(figurMitte: FigurPerMitte)
+/+equals(o: Object): boolean/
++mitte(): Punkt
+/+durchmesser(): double/
+/+flaeche(): double/
+/+umfang(): double/
+/+istEnthalten(p: Punkt): boolean/
++verschiebe(dx: double, dy: double): FigurPerMitte
+/+toString(): String/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>680</y>
+      <w>480</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>RechteckXYPerMitteLaengen
+--
+-final eps: double
+-final x: double
+-final y: double
+--
++RechteckXYPerMitteLaengen(mitte: Punkt, breite: double, laenge: double)
++RechteckXYPerMitteLaengen(rechteck: RechteckXYPerMitteLaengen)
++laenge(): double
++breite(): double
++ecke(istLinks: boolean, istUnten: boolean): Punkt
++equals(o: Object): boolean
++durchmesser(): double
++flaeche(): double
++umfang(): double
++istEnthalten(p: Punkt): boolean
++toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>260</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>550</y>
+      <w>30</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+</diagram>

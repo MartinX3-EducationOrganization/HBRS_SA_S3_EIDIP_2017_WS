@@ -1,5 +1,6 @@
-/*
 package org.bonn.se.ws17.uebung12_04;
+
+import org.bonn.se.ws17.uebung10_03.Zahlen;
 
 public class Punkt {
     private double x; // = 0; (implizite Init.)
@@ -46,4 +47,3 @@ public class Punkt {
         return "(" + x + "," + y + ")";
     }
 }
-*/
