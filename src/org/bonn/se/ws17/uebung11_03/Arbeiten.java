@@ -43,4 +43,27 @@ public class Arbeiten {
         job.zweck();
     }
 }
+
+Lösung:
+
+    Ausgabe:
+
+Kaffee holen!
+Loesung in den Praktomat laden!
+bringt Geld
+
+Erklärung:
+
+In der Classe Arbeiten wird die Main aufgerufen.
+Hier wir ein neues Job-Objekt vom Typ Programmieraufgabe iniziert.
+job.erldigen(): Programmieraufgabe hat keine (Instanz-) Methode mit erledigen. Aber die Klasse Job.
+                In der Klasse Job wird erledigen() aufgerufen, das wiederrum start() und stop() aufruft,
+                aber aus der (Spez./Kind-)Klasse Programmieraufgaben.
+                -> Kaffe holen!
+                -> Loesung in den Praktomaten laden!
+
+                job.zweck() verhält sich anderst da es eine statische Methode ist somit wird die von Job aufgerufen und ausgegeben.
+                -> bringt Geld
+
+
 */
